@@ -1,0 +1,452 @@
+/*-----------------------------------*/
+/*  BASIC SETUP  */
+/*-----------------------------------*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #daf3f8;
+    color: #333333;
+    font-family: 'Lato','Arial',sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+.clearfix {zoom: 1}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+
+/*-----------------------------------*/
+/*  REUSABLE COMPONENTS  */
+/*-----------------------------------*/
+
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 80px 0 0 0;
+}
+
+.box {
+    padding: 1%;
+}
+
+
+/*-----------------------------------*/
+/*  HEADINGS  */
+/*-----------------------------------*/
+
+
+h1,
+h2,
+h3 {
+    font-weight: 300;
+    word-spacing: 3px;
+}
+
+h1{
+    margin: 0;
+    color: rgb(23, 230, 230);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+}
+
+
+/*-----------------------------------*/
+/*  BUTTONS  */
+/*-----------------------------------*/
+
+
+.btn {
+    display: inline-block;
+    margin: 40px 30px 10px 30px;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 40%;
+    -webkit-border-radius: 40%;
+    -moz-border-radius: 40%;
+    -ms-border-radius: 40%;
+    -o-border-radius: 40%;
+    border: 1px solid;
+}
+
+.sign_up:link,
+.sign_up:visited {
+    color: #44bd32;
+    border-color: #44bd32;
+    margin-right: 100px;
+    transition: background-color 0.2s,color 0.2s;
+    -webkit-transition: background-color 0.2s,color 0.2s;
+    -moz-transition: background-color 0.2s,color 0.2s;
+    -ms-transition: background-color 0.2s,color 0.2s;
+    -o-transition: background-color 0.2s,color 0.2s;
+}
+
+.sign_up:active,
+.sign_up:hover {
+    background-color: #44bd32;
+    color: #fafafa;
+}
+
+.login:link,
+.login:visited {
+    color: #0097e6;
+    border-color: #0097e6;
+    margin-left: 100px;
+    transition: background-color 0.2s,color 0.2s;
+    -webkit-transition: background-color 0.2s,color 0.2s;
+    -moz-transition: background-color 0.2s,color 0.2s;
+    -ms-transition: background-color 0.2s,color 0.2s;
+    -o-transition: background-color 0.2s,color 0.2s;
+}
+
+.login:active,
+.login:hover {
+    background-color: #0097e6;
+    color: aliceblue;
+}
+
+
+/*-----------------------------------*/
+/*  HEADER  */
+/*-----------------------------------*/
+
+header {
+    background-image:linear-gradient(rgba(11,11,11,0.8),rgba(11,11,11,0.8)),url(https://www.wikihow.com/images/thumb/1/18/Take-Better-Notes-Step-1-Version-2.jpg/aid11032-v4-728px-Take-Better-Notes-Step-1-Version-2.jpg.webp);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+.header-text-box {
+    color: rgb(230, 230, 230);
+    text-align: center;
+    position: absolute;
+    width: 1140px;
+    top: 48%;
+    left: 50%;
+    font-size: 150%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+header p {
+    word-spacing: 5px;
+}
+
+.scroll:link,
+.scroll:visited {
+    text-decoration: none;
+    color: rgb(230, 230, 230);
+    transition: color 0.2s;
+    -webkit-transition: color 0.2s, border 0.3s;
+    -moz-transition: color 0.2s;
+    -ms-transition: color 0.2s;
+    -o-transition: color 0.2s;
+    border-bottom: 1px solid;
+    border-bottom: transparent;
+}
+
+.scroll:active,
+.scroll:hover {
+    color: #0097e6;
+    border-bottom: #0097e6;
+    border-bottom: 1px solid;
+}
+
+
+
+/*-----------------------------------*/
+/*  TODO SCECTION  */
+/*-----------------------------------*/
+
+
+ .todo-section {
+    padding: 80px 0;
+    font-family: sans-serif;
+}  
+
+.container {
+    width: 660px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.content{
+    width: 100%;
+    height: 400px;
+    max-height: 400px;
+    background-color: rgb(250, 250, 250);
+    box-shadow: 0 10px 24px rgb(207, 226, 226);
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    overflow: auto;
+}
+
+.content::-webkit-scrollbar { 
+    display: none; 
+}
+
+.content ul {
+    padding: 0;
+    margin: 0;
+}
+
+.item {
+    width: 660px;
+    height: 45px;
+    min-height: 45px;
+    position: relative;
+    border-bottom: 1px solid #888888;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* ============Buttons in content (START)============ */
+
+.item ion-icon {
+        font-size: 150%;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        transition: background-color 0.2s;
+        -webkit-transition: background-color 0.2s;
+        -moz-transition: background-color 0.2s;
+        -ms-transition: background-color 0.2s;
+        -o-transition: background-color 0.2s;
+}
+
+.item ion-icon:hover{
+    cursor: pointer;
+    background-color: #ececec;
+}
+
+.btn-check {
+    position: absolute;
+    padding-left:5px;
+    left:10px;
+    top:7px;
+    padding-right: 5px;
+    color: #44bd32;
+}
+
+.btn-uncheck{
+    position: absolute;
+    padding-left:5px;
+    left:10px;
+    top:7px;
+    padding-right: 5px;
+    color: #ffcd3c;
+}
+
+.trash {
+    position: absolute;
+    padding-left:5px;
+    right: 25px;
+    top:7px;
+    padding-right: 5px;
+}
+
+.trash:link,
+.trash:visited {
+    transition-duration: 0.3s;
+}
+
+.trash:active,
+.trash:hover {
+    color: #d92027;
+}
+
+/* ========= Buutons in content(END) ============ */
+
+.item p.text {
+    position: absolute;
+    padding: 0;
+    padding-top: 6px;
+    margin: 0;
+    margin-left: 15px;
+    font-size: 100%;
+    font-weight: 400;
+    left: 50px;
+    top: 5px;
+    max-width: 500px;
+}
+
+.lineThrough {
+    text-decoration: line-through;
+    color: #aaaaaa;
+}
+
+/*** =============== ***/
+
+.add-to-do {
+    position: relative;
+    width: 640px;
+    height: 54px;
+    padding: 10px;
+    padding-top: 20px;
+    background-color: #a5dee6;
+    box-shadow: 0 10px 24px rgb(207, 226, 226);
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+}
+
+.add-to-do input {
+    position: absolute;
+    margin-left: 30px;
+    padding: 3px 10px;
+    width: 530px;
+    left: 30px;
+    transform: translateY(-11px);
+    -webkit-transform: translateY(-11px);
+    -moz-transform: translateY(-11px);
+    -ms-transform: translateY(-11px);
+    -o-transform: translateY(-11px);
+}
+
+/* ========= Buutons in add-item(START) ============ */
+
+.add-btn {
+    position: absolute;
+    top: 3px;
+    left:5px;
+    font-size: 220%;
+}
+
+.add-btn:link,
+.add-btn:visited {
+    color: black;
+}
+
+.add-btn:hover,
+.add-btn:active {
+    color: #0097e6;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transition-duration: 0.3s;
+}
+
+/* ========= Buutons in add-item(END) ============ */
+
+
+/*-----------------------------------*/
+/*  FOOTER  */
+/*-----------------------------------*/
+
+ 
+footer {
+    background-color: #162447;
+    padding-top: 80px;
+    padding-bottom: 100px;
+    font-size: 90%;
+}
+
+footer p {
+    text-align: center;
+    margin-top: 50px;
+    color: rgb(100, 120, 150);
+}
+
+.footer-nav {
+    list-style: none;
+    float: left;
+}
+
+.social-links {
+    list-style: none;
+    float: right;    
+}
+
+.footer-nav li,
+.social-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+    margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited {
+    text-decoration: none;
+    border: none;
+    color: rgb(120, 120, 120);
+    transition: color 0.3s, font-size 0.5s;
+    -webkit-transition: color 0.3s, font-size 0.5s;
+    -moz-transition: color 0.3s, font-size 0.5s;
+    -ms-transition: color 0.3s, font-size 0.5s;
+    -o-transition: color 0.3s, font-size 0.5s;
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+    text-decoration: none;
+    border: none;
+    color: rgb(93, 93, 93);
+    font-size: 140%;
+    transition: color 0.3s, font-size 0.5s;
+    -webkit-transition: color 0.3s, font-size 0.5s;
+    -moz-transition: color 0.3s, font-size 0.5s;
+    -ms-transition: color 0.3s, font-size 0.5s;
+    -o-transition: color 0.3s, font-size 0.5s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+    color: #ececec;
+    font-size: 120%;
+}
+
+.social-links li a:hover,
+.social-links li a:active {
+    font-size: 220%;
+}
+
+.facebook:hover,
+.facebook:active {
+    color: #3b5999;
+}
+
+.twitter:hover,
+.twitter:active {
+    color: #55acee;
+}
+
+.google:hover,
+.google:active {
+    color: #09b83e;
+}
+
+.instagram:hover,
+.instagram:active {
+    color: #e4405f;
+}
